@@ -210,6 +210,8 @@
                 reinitDateTimeShortCuts();
                 updateSelectFilter();
                 alternatingRows(row);
+                if(options.added)
+                    options.added(row);
             }
         });
 
@@ -274,6 +276,8 @@
                 reinitDateTimeShortCuts();
                 updateSelectFilter();
                 update_inline_labels(row.parent());
+                if(options.added)
+                    options.added(row);
             })
         });
 
